@@ -6,34 +6,34 @@
 collective.pantry
 =================
 
-Tell me what your product does
+The main objective of this product is to make it easy for integrators to enable
+TinyMCE templates (user addable HTML snippets) in your RichText fields and
+tiles. These HTML snippets can be added using two approaches. You can define
+theme defined snippets, idealy defined by the themer or designer. In addition,
+you can also enable the users to be able to define their own HTML snippets
+using the content type provided.
 
-Features
---------
+The snippets are available from the template button on TinyMCE, ready to be
+used.
 
-- Can be bullet points
+It also enables the "Pantry". It's a summary view of Plone style elements along
+with the theme and user snippets. It's an update of the good old
+`test_rendering` view.
 
+Theme Snippets
+--------------
 
-Examples
---------
+They are defined as HTML files in a directory called `pantry`. The format is
+plain HTML. At a later point, you can also override them or add more theme
+snippets if you customize the theme using the Plone Theme editor.
 
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
-
-
-Documentation
+User Snippets
 -------------
 
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
-
-
-Translations
-------------
-
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
-
+This product makes available a content type called `snippet`. Each snippet is a
+page-like object that defines a single snippet. They are meant to be
+user-defined. As any other content type, you can give the users permissions
+over them, or disable them completely, depending on your use case.
 
 Installation
 ------------
