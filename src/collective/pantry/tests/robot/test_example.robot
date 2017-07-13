@@ -28,9 +28,13 @@ Resource  plone/app/robotframework/keywords.robot
 
 Library  Remote  ${PLONE_URL}/RobotRemote
 
-Test Setup  Open test browser
+Test Setup  Test Setup
 Test Teardown  Close all browsers
 
+*** Variables ***
+
+${BROWSER}              chrome
+${HEADLESS}             ${true}
 
 *** Test Cases ***************************************************************
 
@@ -64,3 +68,10 @@ I enter valid credentials
 I am logged in
   Wait until page contains  You are now logged in
   Page should contain  You are now logged in
+
+Test Setup
+  ${options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
+  Run keyword if  '${HEADLESS}' == '${true}'  Call Method  ${options}  add_argument  headless
+  Call Method  ${options}  add_argument  disable-extensions
+  Call Method  ${options}  add_argument  start-maximized
+  Create WebDriver  Chrome  chrome_options=${options}

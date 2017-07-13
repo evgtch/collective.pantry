@@ -5,12 +5,22 @@ cache:
   directories:
   - eggs
   - downloads
+dist: trusty
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
 python:
   - 2.7
 matrix:
   fast_finish: true
 before_install:
-   - pip install zc.buildout
+  - pip install zc.buildout
+  - wget "http://chromedriver.storage.googleapis.com/2.30/chromedriver_linux64.zip"
+  - unzip chromedriver_linux64.zip
+  - sudo mv chromedriver /usr/local/bin
 install:
   - buildout -N buildout:download-cache=downloads code-analysis:return-status-codes=True annotate
   - buildout -N buildout:download-cache=downloads code-analysis:return-status-codes=True
