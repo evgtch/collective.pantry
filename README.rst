@@ -21,7 +21,7 @@ used.
 
 It also enables the "Pantry". It's a summary view of Plone style elements along
 with the theme and user snippets. It's an update of the good old
-`test_rendering` view.
+`test_rendering` view. You can fing the Pantry at the `pantry` view.
 
 Theme Snippets
 --------------
@@ -59,14 +59,6 @@ Contribute
 
 - Issue Tracker: https://github.com/collective/collective.pantry/issues
 - Source Code: https://github.com/collective/collective.pantry
-- Documentation: https://docs.plone.org/foo/bar
-
-
-Support
--------
-
-If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
 
 
 License
