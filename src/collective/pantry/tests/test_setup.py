@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Setup tests for this package."""
-from plone import api
 from collective.pantry.testing import COLLECTIVE_PANTRY_INTEGRATION_TESTING  # noqa
+from plone import api
 
 import unittest
 
@@ -51,5 +51,5 @@ class TestUninstall(unittest.TestCase):
             ICollectivePantryLayer
         from plone.browserlayer import utils
         self.assertNotIn(
-           ICollectivePantryLayer,
-           utils.registered_layers())
+            ICollectivePantryLayer,
+            utils.registered_layers())
