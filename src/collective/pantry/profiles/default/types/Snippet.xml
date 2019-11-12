@@ -8,7 +8,7 @@
   <!-- Basic properties -->
   <property
       i18n:translate=""
-      name="title">Snippet</property>
+      name="title">Template</property>
   <property
       i18n:translate=""
       name="description"></property>
