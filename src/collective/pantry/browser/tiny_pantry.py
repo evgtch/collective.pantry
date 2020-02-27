@@ -16,7 +16,8 @@ class TinyPantry(BrowserView):
         pc = api.portal.get_tool('portal_catalog')
         brains = pc.searchResults(
             portal_type='Snippet',
-            sort_on='getObjPositionInParent')
+            sort_on='sortable_title',
+            sort_order='ascending')
 
         user_pantry = []
         for brain in brains:
